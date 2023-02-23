@@ -6,7 +6,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>GitHub Finder</h1>
+      <h1>GitHub Finder</h1> 
       <Outlet />
     </div>
   )
