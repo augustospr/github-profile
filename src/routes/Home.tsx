@@ -15,16 +15,13 @@ const Home = () => {
         setUser(null);
 
         const res = await fetch(`https://api.github.com/users/${userName}`);
-
         const data = await res.json();
-
         if (res.status === 404) {
             setError(true);
             return;
         }
 
         const { avatar_url, login, location, followers, following } = data;
-
         const userData: UserProps = {
             avatar_url,
             login,
@@ -32,7 +29,6 @@ const Home = () => {
             followers,
             following,
         };
-
         setUser(userData);
     };
 
